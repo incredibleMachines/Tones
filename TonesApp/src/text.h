@@ -12,7 +12,7 @@
 #include "ofxOsc.h"
 #include "ofxTextSuite.h"
 
-#define PORTTEXT 7000
+#define PORTTEXT 7002
 
 
 class Text{
