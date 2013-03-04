@@ -28,7 +28,7 @@ class Twitter{
     
         //*************************************
     
-        ofxOscSender player;
+        ofxOscSender player, player2;
         ofxOscReceiver player_callback;
         void sendToPlayer();
         void callback_listener();

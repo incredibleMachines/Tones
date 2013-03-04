@@ -6,7 +6,8 @@ void Twitter::setup(){
 
     string oscIp = "127.0.0.1";//"10.0.1.44";
     
-    player.setup(oscIp, 7000);
+    player.setup(oscIp, 7002);
+    player2.setup(oscIp, 7000);
     player_callback.setup(12345);
     
 
@@ -255,11 +256,14 @@ void Twitter::sendToPlayer(){
     filepath=thisTweet.filepaths[r];
     ofStringReplace(filepath,"../../" ,"");
     string fullpath = filepath;
-    ofxOscMessage m;
+    ofxOscMessage m,n;
+    n.setAddress("/file");
     m.setAddress("/tweet");
     m.addStringArg(fullpath);
     m.addStringArg(thisTweet.message);
     m.addStringArg(thisTweet.user);
+    n.addStringArg(fullpath);
+    player2.sendMessage(n);
     player.sendMessage(m);
     cout << "Sent Message:  " << fullpath << endl;
     
