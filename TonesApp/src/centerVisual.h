@@ -12,6 +12,8 @@
 #include <iostream>
 #include "ofMain.h"
 #include "particleRing.h"
+#include "ofxOsc.h"
+#define PORT_RECEIVE 9000
 
 class centerVisual {
     
@@ -28,6 +30,10 @@ public:
     vector <particle *> myParticles;
     vector<ofVec2f>repulsionPoints;
     
+    //Receive beats from Live
+    ofxOscReceiver beatReceiver;
+    string beat1;
+    bool bHaveBeat;
     
 };
 
