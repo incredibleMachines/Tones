@@ -55,6 +55,9 @@ public:
     int ring;
     
     ofColor color;
+    ofVec2f moveToCenter;
+    ofVec2f innerPos;
+
     
 protected:
 private:

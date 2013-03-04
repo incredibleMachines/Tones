@@ -55,14 +55,16 @@ void centerVisual::update(){
 	for (int i = 0; i < myParticles.size(); i++){
 		for (int j = i-1; j >= 0; j--){
 			if ( fabs(myParticles[j]->pos.x - myParticles[i]->pos.x) >  10) break;
-			myParticles[i]->addRepulsionForce(*myParticles[j], 10, 0.2f);
+			myParticles[i]->addRepulsionForce(*myParticles[j], 12, 0.2f);
             
 		}
     }
 
     for (int i = 0; i < myParticles.size(); i++){
         float attraction = 0.01;
-
+        
+        myParticles[i]->addAttractionForce(center.x,center.y, 400, 0.01);
+        myParticles[i]->addAttractionForce(center.x,center.y, 500, 0.001);
         
         for (int j=0; j<repulsionPoints.size(); j++) {
             myParticles[i]->addRepulsionForce(repulsionPoints[j].x,repulsionPoints[j].y, 50, 0.5);
@@ -70,7 +72,7 @@ void centerVisual::update(){
         }
         
 		myParticles[i]->addDampingForce();
-        myParticles[i]->bounceOffWalls(mainShape.getVertices());
+//        myParticles[i]->bounceOffWalls(mainShape.getVertices());
         myParticles[i]->update();
 	}
     
@@ -80,20 +82,20 @@ void centerVisual::update(){
 //------------------------------------------------------------
 void centerVisual::draw(){
     //    mainShape.draw();
-    ofCircle(center, 10);
+    ofCircle(center, 2);
     
     ofSetColor(150,255,230,100);
     ofFill();
-    ofBeginShape();
-    for(int i=0; i<mainShape.getVertices().size();i++){
-        ofVertex(mainShape.getVertices()[i]);
-    }
-    ofEndShape();
+//    ofBeginShape();
+//    for(int i=0; i<mainShape.getVertices().size();i++){
+//        ofVertex(mainShape.getVertices()[i]);
+//    }
+//    ofEndShape();
     
-    for(int i=0; i<20;i++){
+    for(int i=0; i<40;i++){
         ofSetCircleResolution(60);
-        ofSetColor(150,255,230, 10);
-        ofCircle(center, 10*i);
+        ofSetColor(150,255,230, 5);
+        ofCircle(center, 5*i);
     }
     
     //DRAW PARTICLES

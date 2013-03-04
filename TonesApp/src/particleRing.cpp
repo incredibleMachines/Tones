@@ -16,6 +16,7 @@ particle::particle(){
     bRedraw = false;
     
     color.setHsb(130, 150, 255);
+    moveToCenter.set(ofGetWidth()/2, ofGetHeight()/2);
 }
 
 //------------------------------------------------------------
@@ -188,6 +189,7 @@ void particle::update(){
 	vel = vel + frc;
 	pos = pos + vel;
     
+    innerPos = pos - moveToCenter*0.02;
     
     if (!outRing.inside(pos)) {
         bInsideMyRing = false;
@@ -201,14 +203,21 @@ void particle::update(){
 //------------------------------------------------------------
 void particle::draw(){
   
+    
+
+    
    	if (vel.x + vel.y >1){
    		ofSetColor(80- 30 *(vel.x*vel.y), 200 - 30 *(vel.x*vel.y), 255 - 10 * (vel.x*vel.y) );
    		ofCircle(pos, 5+vel.x*vel.y*0.5);
+        ofCircle(innerPos , 5+vel.x*vel.y*0.5);
    	}
    
    	else if (vel.x < 1 || vel.y <1) {
    		ofSetColor(100 - 30 *(vel.x*vel.y), 200 - 30 *(vel.x*vel.y), 220 - 5 * (vel.x*vel.y) );
-   		ofCircle(pos, 2 + vel.x*vel.x*0.5);
+   		ofCircle(pos, 1 + vel.x*vel.x*0.5);
+        
+//        ofCircle(innerPos , 1+vel.x*vel.y*0.5);
+
    	}
 
     

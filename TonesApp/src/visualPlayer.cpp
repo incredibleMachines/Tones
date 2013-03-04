@@ -58,11 +58,14 @@ void visualPlayer::update(){
     for (int i=0; i<numNotes; i++) {
         if (note==i) {
             zone.units[i].bActiveUnit=true;
+            zone.bActive=true;
         }else{
             zone.units[i].bActiveUnit=false;
+            zone.bActive=false;
         }
         if (!bActive) {
             zone.units[i].bActiveUnit=false;
+            zone.bActive=false;
         }
     }
     
@@ -90,6 +93,10 @@ void visualPlayer::draw(){
     
     ofVec2f moveToOrigin = playerPos - origin;
 
+    ofSetColor(50, 50, 50);
+    ofLine(origin, origin-baseLine*0.5); //line beyond origin
+    
+    
     ///rotate over the main angle
     ofPushMatrix();
     ofTranslate(origin);
@@ -98,11 +105,16 @@ void visualPlayer::draw(){
     ///DRAW HERE
     
     //player area
-    ofNoFill();
-    ofSetColor(100, 190, 170);
+    if (bActive) {
+        ofSetColor(200, 190, 170);
+    }else{
+        ofNoFill();
+        ofSetColor(100, 190, 170);
+    }
+
     ofRect(-baseLength*1.25, -viewerWidth/2, viewerBaseline.length()*1.5, viewerWidth);
 
-    
+
     //note area
     ofFill();
     zone.draw();
@@ -111,13 +123,10 @@ void visualPlayer::draw(){
 //    //draw spotlight
 //    ofRect(-baseLine.length()+viewerBaseline.length(), -viewerWidth/2, -viewerBaseline.length(), viewerWidth);
 
-    
-
-    
     ofPopMatrix();
     ///pop
     
-    ofLine(origin, origin-baseLine*0.5); //line beyond origin
+
     
     ///Draw circle for playerPos 
     ofPushStyle();

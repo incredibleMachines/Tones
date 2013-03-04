@@ -28,7 +28,7 @@ void Tones::update(){
 //--------------------------------------------------------------
 void Tones::draw(){
     ofSetLineWidth(2);
-    ofCircle(ofGetWidth()/2, ofGetHeight()/2, 5);
+//    ofCircle(ofGetWidth()/2, ofGetHeight()/2, 5);
     ofDrawBitmapString(ofToString(ofGetFrameRate()),ofGetWidth()/4,ofGetHeight()/4);
     hex.draw();
 

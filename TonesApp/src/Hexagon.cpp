@@ -155,6 +155,7 @@ void Hexagon::update(bool bDrawAdmin, bool bMouseMode){
                 }
                 else{
                     visualPlayers[i].playerPos=visualPlayers[i].handleDefault;
+                    visualPlayers[i].bActive=false;
                 }
             }
             else{
@@ -176,15 +177,16 @@ void Hexagon::update(bool bDrawAdmin, bool bMouseMode){
     
     ///CENTER VISUALIZER
     for (int i=0; i<visualPlayers.size(); i++) {
-        centerVis.repulsionPoints[i].set(visualPlayers[i].origin - visualPlayers[i].baseLine  * visualPlayers[i].zone.posOffset*0.5);
-
+        if (visualPlayers[i].bActive) {
+            centerVis.repulsionPoints[i].set(visualPlayers[i].origin - visualPlayers[i].baseLine  * visualPlayers[i].zone.posOffset * 0.5);
+        }else if (!visualPlayers[i].bActive)  {
+            centerVis.repulsionPoints[i].set(visualPlayers[i].origin + visualPlayers[i].baseLine);
+        }
     }
+    
     centerVis.update();
     
-
-    
 }
-
 
 
 //--------------------------------------------------------------

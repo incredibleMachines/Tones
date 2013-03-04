@@ -55,12 +55,15 @@ void Text::update(){
     
     
     tweetText.wrapTextX(260);
-
-    tweetText.setColor(20, 40, 80, 255);
+    
+    ofPushStyle();
+    tweetText.setColor(255,255,255,255);
     userText.setColor(20, 40, 80, 255);
     //userText.setColor(255, 0, 0, 255);
     userText.forceScale(0.3f);
     //userText.wrapTextArea(400, 400;);
+    ofPopStyle();
+    
 }
 
 //--------------------------------------------------------------

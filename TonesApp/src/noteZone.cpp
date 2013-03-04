@@ -66,13 +66,16 @@ void noteZone::update(int _note){
             units[i].pos = currentPos;
             units[i].update(true);
             units[i].scale = 5*i;
+
         }else{
             units[i].pos = currentPos;
             units[i].update(false);
             units[i].scale = 0.5;
-            units[i].unitSpreadFromCenter = ofVec2f(0,30*i);
+
+            
 
         }
+        
     }
 }
 
@@ -86,6 +89,8 @@ void noteZone::draw(){
         units[i].draw();
     }
     ofPopMatrix();
+    
+    
     
 //    ofCircle(currentPos, 10);
 
@@ -104,7 +109,7 @@ void unit::setup(ofVec2f _pos, int d, float s){
     
     scale = 1.0f;
     bActiveUnit = false;
-    expandSpeed = 0.1;
+    expandSpeed = 0.5;
     contractSpeed = 0.05;
     unitSpreadFromCenter.set(0,s*2);
     unitDiagonal.set(40,0);
@@ -139,7 +144,8 @@ void unit::draw(){
 
 //CIRCLE CLASS
 void circle::draw(ofVec2f _pos, float _scale){
-    color.setHsb(20 + 3*_scale, 3 *_scale, 50 + 10 * _scale);
+    color.setHsb( 200- 10*_scale, 100+3 *_scale, 50 + 10 * _scale);
+//    color.setHsb( 0,10,10);
     ofSetColor(color);
     ofCircle(_pos, _scale);
 }
