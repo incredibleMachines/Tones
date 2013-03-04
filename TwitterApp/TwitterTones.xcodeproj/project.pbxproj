@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8355B9D816D01FAF00C01EA8 /* Twitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8355B9D616D01FAF00C01EA8 /* Twitter.cpp */; };
 		86AAB2C916E3D22A00C74A64 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB26F16E3D22A00C74A64 /* json_reader.cpp */; };
 		86AAB2CA16E3D22A00C74A64 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB27016E3D22A00C74A64 /* json_value.cpp */; };
 		86AAB2CB16E3D22A00C74A64 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB27216E3D22A00C74A64 /* json_writer.cpp */; };
@@ -34,6 +33,9 @@
 		86AAB2E216E3D22A00C74A64 /* ofxSQLiteSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB2BA16E3D22A00C74A64 /* ofxSQLiteSelect.cpp */; };
 		86AAB2E316E3D22A00C74A64 /* ofxSQLiteSimpler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB2BC16E3D22A00C74A64 /* ofxSQLiteSimpler.cpp */; };
 		86AAB2E416E3D22A00C74A64 /* ofxSQLiteUpdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86AAB2C016E3D22A00C74A64 /* ofxSQLiteUpdate.cpp */; };
+		86BD181916E43C260075A0B7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86BD181416E43C260075A0B7 /* main.cpp */; };
+		86BD181A16E43C260075A0B7 /* Tones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86BD181516E43C260075A0B7 /* Tones.cpp */; };
+		86BD181B16E43C260075A0B7 /* Twitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86BD181716E43C260075A0B7 /* Twitter.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -45,8 +47,6 @@
 		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
 		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
 		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
-		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
-		E4B69E210A3A1BDC003C02F2 /* Tones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* Tones.cpp */; };
 		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
@@ -87,8 +87,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8355B9D616D01FAF00C01EA8 /* Twitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Twitter.cpp; sourceTree = "<group>"; };
-		8355B9D716D01FAF00C01EA8 /* Twitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Twitter.h; sourceTree = "<group>"; };
 		86AAB22E16E3D22A00C74A64 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		86AAB26116E3D22A00C74A64 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		86AAB26216E3D22A00C74A64 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -168,6 +166,10 @@
 		86AAB2C016E3D22A00C74A64 /* ofxSQLiteUpdate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSQLiteUpdate.cpp; sourceTree = "<group>"; };
 		86AAB2C116E3D22A00C74A64 /* ofxSQLiteUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSQLiteUpdate.h; sourceTree = "<group>"; };
 		86AAB2C216E3D22A00C74A64 /* ofxSQLiteWhere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSQLiteWhere.h; sourceTree = "<group>"; };
+		86BD181416E43C260075A0B7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		86BD181516E43C260075A0B7 /* Tones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tones.cpp; sourceTree = "<group>"; };
+		86BD181716E43C260075A0B7 /* Twitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Twitter.cpp; sourceTree = "<group>"; };
+		86BD181816E43C260075A0B7 /* Twitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Twitter.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -180,8 +182,6 @@
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		E4B69B5B0A3A1756003C02F2 /* TwitterTonesDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTonesDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		E4B69E1E0A3A1BDC003C02F2 /* Tones.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Tones.cpp; path = src/Tones.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* Tones.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Tones.h; path = src/Tones.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -531,10 +531,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				8355B9D616D01FAF00C01EA8 /* Twitter.cpp */,
-				8355B9D716D01FAF00C01EA8 /* Twitter.h */,
-				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				E4B69E1E0A3A1BDC003C02F2 /* Tones.cpp */,
+				86BD181416E43C260075A0B7 /* main.cpp */,
+				86BD181516E43C260075A0B7 /* Tones.cpp */,
+				86BD181716E43C260075A0B7 /* Twitter.cpp */,
+				86BD181816E43C260075A0B7 /* Twitter.h */,
 				E4B69E1F0A3A1BDC003C02F2 /* Tones.h */,
 			);
 			path = src;
@@ -633,9 +633,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				E4B69E210A3A1BDC003C02F2 /* Tones.cpp in Sources */,
-				8355B9D816D01FAF00C01EA8 /* Twitter.cpp in Sources */,
 				86AAB2C916E3D22A00C74A64 /* json_reader.cpp in Sources */,
 				86AAB2CA16E3D22A00C74A64 /* json_value.cpp in Sources */,
 				86AAB2CB16E3D22A00C74A64 /* json_writer.cpp in Sources */,
@@ -662,6 +659,9 @@
 				86AAB2E216E3D22A00C74A64 /* ofxSQLiteSelect.cpp in Sources */,
 				86AAB2E316E3D22A00C74A64 /* ofxSQLiteSimpler.cpp in Sources */,
 				86AAB2E416E3D22A00C74A64 /* ofxSQLiteUpdate.cpp in Sources */,
+				86BD181916E43C260075A0B7 /* main.cpp in Sources */,
+				86BD181A16E43C260075A0B7 /* Tones.cpp in Sources */,
+				86BD181B16E43C260075A0B7 /* Twitter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

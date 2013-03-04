@@ -319,13 +319,13 @@
     </ROTATE>
     <DRAW>
         <CURRENT>
-            <val_0>1.000000000</val_0>
+            <val_0>0.000000000</val_0>
         </CURRENT>
         <DEFAULT>1</DEFAULT>
     </DRAW>
     <CONTOUR>
         <CURRENT>
-            <val_0>1.000000000</val_0>
+            <val_0>0.000000000</val_0>
         </CURRENT>
         <DEFAULT>1</DEFAULT>
     </CONTOUR>
@@ -451,4 +451,9 @@
         </CURRENT>
         <DEFAULT>50</DEFAULT>
     </THRESHOLD>
+    <SIZE>
+        <CURRENT>
+            <val_0>25.000000000</val_0>
+        </CURRENT>
+    </SIZE>
 </CV>

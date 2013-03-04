@@ -32,8 +32,8 @@ void Twitter::update(){
 void Twitter::callback_listener(){
 
     while (player_callback.hasWaitingMessages()) {
-        //ofxOscMessage m;
-		//player_callback.getNextMessage(&m);
+        ofxOscMessage m;
+		player_callback.getNextMessage(&m);
         cout<<"[CALLBACK_LISTENER] Got Message From Audio" <<endl;
         sendToPlayer();
     }
