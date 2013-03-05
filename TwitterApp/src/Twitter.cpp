@@ -25,6 +25,7 @@ void Twitter::setup(){
     //string tQueries[] = {"#tones", "#feed","#FEEDsxsw"};
     
     //in order of priority
+    twitterQueries.push_back("#TONESsxsw");
     twitterQueries.push_back("#tones");
     twitterQueries.push_back("#FEEDsxsw");
     twitterQueries.push_back("#sxsw");
@@ -108,9 +109,13 @@ void Twitter::tweetToVoice(ofxJSONElement _json){
     
     bool bQuiet = false;
     for (int i = 0; i<voiceNames.size(); i++) {
-        string filename= voiceNames[i]+".wav";
+        string filename= tweet_id+"_"+voiceNames[i]+".wav";
+        
+        string speakText = tweet_text;
+        
+        ofStringReplace(speakText, "#", "hashtag ");
 
-        string speak = "say -v "+voiceNames[i]+" -r 160 -o "+filename+settings+" \"" +tweet_text+ "\" ";
+        string speak = "say -v "+voiceNames[i]+" -r 160 -o "+filename+settings+" \"" +speakText+ "\" ";
         if(!bQuiet) cout << speak << endl;
         system(speak.c_str());
         

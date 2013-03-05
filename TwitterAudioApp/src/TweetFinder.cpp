@@ -15,10 +15,10 @@ void Twitter::setup(){
 
     
     //in order of priority
+    twitterQueries.push_back("#TONESsxsw");
     twitterQueries.push_back("#tones");
     twitterQueries.push_back("#FEEDsxsw");
     twitterQueries.push_back("#sxsw");
-    
     
 }
 
@@ -85,7 +85,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
     
     if(_query != "_"){
     
-        ofxSQLiteSelect sel = sqlite->select("id,tweet_text,total_plays,user_name,filepath,voice_names")
+        ofxSQLiteSelect sel = sqlite->select("id, twitter_id, tweet_text,total_plays,user_name,filepath,voice_names")
                                         .from("tweets")
                                         .where("twitter_query", _query)
                                         .order("last_time_played","DESC")
@@ -102,6 +102,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
             cout << endl;
             
             theTweet._id = sel.getInt();
+            theTweet.twitter_id=sel.getString();
             theTweet.message = sel.getString();
             theTweet.numPlays=sel.getInt();
             theTweet.user=sel.getString();
@@ -111,7 +112,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
             
             for (int i = 0; i< names.size(); i++) {
                 
-                string tPath = filepath+"/"+names[i]+".wav";
+                string tPath = filepath+"/"+theTweet.twitter_id+"_"+names[i]+".wav";
                 theTweet.filepaths.push_back(tPath);
                 
             }
@@ -130,7 +131,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
         
     }else{
     
-        ofxSQLiteSelect sel = sqlite->select("id,tweet_text,total_plays,user_name,filepath,voice_names")
+        ofxSQLiteSelect sel = sqlite->select("id,twitter_id,tweet_text,total_plays,user_name,filepath,voice_names")
                     .from("tweets")
                     .order("last_time_played","DESC")
                     .limit(1);
@@ -147,6 +148,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
             cout << endl;
             
             theTweet._id = sel.getInt();
+            theTweet.twitter_id=sel.getString();
             theTweet.message = sel.getString();
             theTweet.numPlays=sel.getInt();
             theTweet.user=sel.getString();
@@ -156,7 +158,7 @@ Tweet Twitter::getLastPlayedTweet(string _query){
             
             for (int i = 0; i< names.size(); i++) {
                 
-                string tPath = filepath+"/"+names[i]+".wav";
+                string tPath = filepath+"/"+theTweet.twitter_id+"_"+names[i]+".wav";
                 theTweet.filepaths.push_back(tPath);
                 
             }
@@ -187,7 +189,7 @@ Tweet Twitter::getTweetFromDB(string _query){
     string voice_names;
     Tweet theTweet;
     
-    ofxSQLiteSelect sel = sqlite->select("id,tweet_text,total_plays,user_name,filepath,voice_names")
+    ofxSQLiteSelect sel = sqlite->select("id,twitter_id, tweet_text,total_plays,user_name,filepath,voice_names")
                                     .from("tweets")
                                     .whereNull("last_time_played")
                                     .andWhere("twitter_query", _query)
@@ -206,6 +208,7 @@ Tweet Twitter::getTweetFromDB(string _query){
         cout << endl;
         
         theTweet._id = sel.getInt();
+        theTweet.twitter_id = sel.getString();
         theTweet.message = sel.getString();
         theTweet.numPlays=sel.getInt();
         theTweet.user=sel.getString();
@@ -215,7 +218,7 @@ Tweet Twitter::getTweetFromDB(string _query){
         
         for (int i = 0; i< names.size(); i++) {
             
-            string tPath = filepath+"/"+names[i]+".wav";
+            string tPath = filepath+"/"+theTweet.twitter_id+"_"+names[i]+".wav";
             theTweet.filepaths.push_back(tPath);
             
         }

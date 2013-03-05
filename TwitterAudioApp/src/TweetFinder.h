@@ -11,6 +11,7 @@ class Tweet{
             string message;
             string user;
             int _id;
+            string twitter_id;
             int numPlays;
 };
 
