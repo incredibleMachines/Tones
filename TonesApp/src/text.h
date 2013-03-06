@@ -29,6 +29,8 @@ class Text{
     
     ofxTextBlock tweetText;
     ofxTextBlock userText;
+    
+    float timer;
 
 
 };

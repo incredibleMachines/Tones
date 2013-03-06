@@ -154,7 +154,6 @@ void Hexagon::update(bool bDrawAdmin, bool bMouseMode){
                     visualPlayers[i].bActive=true;
                 }
                 else{
-                    visualPlayers[i].playerPos=visualPlayers[i].handleDefault;
                     visualPlayers[i].bActive=false;
                 }
             }

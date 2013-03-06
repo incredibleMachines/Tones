@@ -11,7 +11,7 @@ void Tones::setup(){
     
     //TURN ON TEST MODE
     bTestMode=false;
-    bMouseMode=false;
+    bMouseMode=true;
     
     if(bTestMode){
         timer=ofGetElapsedTimeMillis();

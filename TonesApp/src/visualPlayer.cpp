@@ -12,6 +12,8 @@
 //--------------------------------------------------------------------
 visualPlayer::visualPlayer(){
     note = 0;
+    bPlaying=false;
+    speed=0.05;
     
 }
 
@@ -31,7 +33,8 @@ void visualPlayer::setup(int _id){
 void visualPlayer::update(){
     if(bActive==true){
         note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x,viewerOrigin.y))/abs(ofDist(handle.x,handle.y,viewerOrigin.x,viewerOrigin.y)))*numNotes;
-        note=(numNotes-1)-note;        
+        note=(numNotes-1)-note;
+        bPlaying=true;
     }
     else{
         note=10;
@@ -51,7 +54,16 @@ void visualPlayer::update(){
     
     //offset for noteZones and repulsion points
     playerPosPct = ofDist(playerPos.x,playerPos.y, viewerOrigin.x, viewerOrigin.y);
-    zone.posOffset = ofMap(playerPosPct, 0, ofDist(handle.x,handle.y,viewerOrigin.x,viewerOrigin.y), 1, 0, true);
+    float offset=ofMap(playerPosPct, 0, ofDist(handle.x,handle.y,viewerOrigin.x,viewerOrigin.y), 1, 0, true);
+    
+    if(bActive==false&&bPlaying==true){
+        offsetStore=(1-speed)*offsetStore;
+        zone.posOffset = offsetStore;
+    }
+    else{
+        zone.posOffset = offset;
+        offsetStore=offset;
+    }
 
     zone.update(note);
     

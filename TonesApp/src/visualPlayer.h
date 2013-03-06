@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include "ofMain.h"
-#include "zones.h"
 #include "noteZone.h"
 
 
@@ -44,6 +43,10 @@ public:
     int     numNotes;
     int     note;
     float   playerPosPct;
+    
+    bool bPlaying;
+    float offsetStore;
+    float speed;
     
 //    vector<zone>zones;
     noteZone zone;
