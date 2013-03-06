@@ -44,6 +44,8 @@ class Twitter{
     
         vector<string>twitterQueries;
     
+        string returnPhraseWithoutURL(string _phrase);
+    
     
         //*************************************
 //    

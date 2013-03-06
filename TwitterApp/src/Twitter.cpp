@@ -111,7 +111,7 @@ void Twitter::tweetToVoice(ofxJSONElement _json){
     for (int i = 0; i<voiceNames.size(); i++) {
         string filename= tweet_id+"_"+voiceNames[i]+".wav";
         
-        string speakText = tweet_text;
+        string speakText = returnPhraseWithoutURL( tweet_text );
         
         ofStringReplace(speakText, "#", "hashtag ");
 
@@ -167,11 +167,13 @@ void Twitter::insertTweet(ofxJSONElement _json){
     }
     int voices = voiceNames.size();
     
+    string updatedText = returnPhraseWithoutURL(_json["tweet_text"].asString());
+    
     sqlite->insert("tweets")
     .use("twitter_id",_json["twitter_id"].asString())
     .use("twitter_timestamp", _json["twitter_timestamp"].asInt())
     .use("twitter_query", _json["twitter_query"].asString())
-    .use("tweet_text",_json["tweet_text"].asString())
+    .use("tweet_text",updatedText)
     //    .use("last_time_played",03223)
     .use("total_plays",0)
     .use("user_name",_json["user_name"].asString())
@@ -203,6 +205,27 @@ void Twitter::createDatabase(){
         )){cout << "[SQLITE DATABASE ERROR] CREATE TABLE ISSUE\n";
 	}
 
+}
+
+string Twitter::returnPhraseWithoutURL(string _phrase){
+    
+    vector<string> words = ofSplitString(_phrase, " ");
+    string newPhrase;
+    string  s= "http://";
+    
+    for (int i = 0; i< words.size(); i++) {
+        
+        int loc =  words[i].find(s);
+        
+        if(loc != -1) words[i] = "";
+        
+    }
+    
+    for (int i = 0; i< words.size(); i++) newPhrase += words[i]+" ";
+    
+    return newPhrase;
+    
+    
 }
 
 
