@@ -20,7 +20,6 @@
 		D017FBFE16D6BEFD00964285 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D017FBE616D6B99D00964285 /* Syphon.framework */; };
 		D082C9A316E166560033312E /* text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D082C9A116E166560033312E /* text.cpp */; };
 		D082C9B016E1686E0033312E /* ofxTextBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D082C9AB16E1686E0033312E /* ofxTextBlock.cpp */; };
-		D0DFCBDB16DE71DF005D1171 /* zones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DFCBD916DE71DF005D1171 /* zones.cpp */; };
 		D31F963716C9AA3200A1BDEE /* oscPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D31F963516C9AA3200A1BDEE /* oscPlayer.cpp */; };
 		D3334B4B16CA038F00AAC584 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3334B3B16CA038F00AAC584 /* tinyxml.cpp */; };
 		D3334B4C16CA038F00AAC584 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3334B3D16CA038F00AAC584 /* tinyxmlerror.cpp */; };
@@ -187,8 +186,6 @@
 		D082C9AB16E1686E0033312E /* ofxTextBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTextBlock.cpp; sourceTree = "<group>"; };
 		D082C9AC16E1686E0033312E /* ofxTextBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTextBlock.h; sourceTree = "<group>"; };
 		D082C9AD16E1686E0033312E /* ofxTextSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTextSuite.h; sourceTree = "<group>"; };
-		D0DFCBD916DE71DF005D1171 /* zones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zones.cpp; sourceTree = "<group>"; };
-		D0DFCBDA16DE71DF005D1171 /* zones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zones.h; sourceTree = "<group>"; };
 		D31F963516C9AA3200A1BDEE /* oscPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscPlayer.cpp; sourceTree = "<group>"; };
 		D31F963616C9AA3200A1BDEE /* oscPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscPlayer.h; sourceTree = "<group>"; };
 		D3334B3B16CA038F00AAC584 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
@@ -1357,31 +1354,29 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				0B8236EC16E1882B00A0ED6C /* RingParticle.cpp */,
-				0B8236ED16E1882B00A0ED6C /* RingParticle.h */,
-				D082C9A116E166560033312E /* text.cpp */,
-				D082C9A216E166560033312E /* text.h */,
-				D0DFCBD916DE71DF005D1171 /* zones.cpp */,
-				D0DFCBDA16DE71DF005D1171 /* zones.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* Tones.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* Tones.cpp */,
 				D39A360E16C5C2FB00D11FD7 /* Hexagon.h */,
 				D39A360F16C5C30500D11FD7 /* Hexagon.cpp */,
-				0BA2D2C316E00E34005ECDE2 /* centerVisual.cpp */,
-				0BA2D2C416E00E34005ECDE2 /* centerVisual.h */,
-				0B40BED016E38F3E008921D7 /* particleRing.cpp */,
-				0B40BED116E38F3E008921D7 /* particleRing.h */,
-				0BC2D61C16E2931A00E7D9A4 /* noteZone.cpp */,
-				0BC2D61D16E2931B00E7D9A4 /* noteZone.h */,
-				0BF4F2F916DF079E002B7127 /* visualPlayer.cpp */,
-				0BF4F2FA16DF079F002B7127 /* visualPlayer.h */,
+				D3F8C84716CBE4E400C36225 /* AdminWindow.h */,
+				D3F8C84616CBE4E400C36225 /* AdminWindow.cpp */,
+				D3D4922316CB33C60089B4DA /* CameraCV.h */,
+				D3D4922216CB33C60089B4DA /* CameraCV.cpp */,
 				D31F963516C9AA3200A1BDEE /* oscPlayer.cpp */,
 				D31F963616C9AA3200A1BDEE /* oscPlayer.h */,
-				D3D4922216CB33C60089B4DA /* CameraCV.cpp */,
-				D3D4922316CB33C60089B4DA /* CameraCV.h */,
-				D3F8C84616CBE4E400C36225 /* AdminWindow.cpp */,
-				D3F8C84716CBE4E400C36225 /* AdminWindow.h */,
+				0BF4F2FA16DF079F002B7127 /* visualPlayer.h */,
+				0BF4F2F916DF079E002B7127 /* visualPlayer.cpp */,
+				0B8236ED16E1882B00A0ED6C /* RingParticle.h */,
+				0B8236EC16E1882B00A0ED6C /* RingParticle.cpp */,
+				D082C9A216E166560033312E /* text.h */,
+				D082C9A116E166560033312E /* text.cpp */,
+				0BA2D2C416E00E34005ECDE2 /* centerVisual.h */,
+				0BA2D2C316E00E34005ECDE2 /* centerVisual.cpp */,
+				0B40BED116E38F3E008921D7 /* particleRing.h */,
+				0B40BED016E38F3E008921D7 /* particleRing.cpp */,
+				0BC2D61D16E2931B00E7D9A4 /* noteZone.h */,
+				0BC2D61C16E2931A00E7D9A4 /* noteZone.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1565,7 +1560,6 @@
 				D017FBF716D6B99D00964285 /* SyphonNameboundClient.m in Sources */,
 				D017FBF816D6B99D00964285 /* ofxSyphonClient.mm in Sources */,
 				D017FBF916D6B99D00964285 /* ofxSyphonServer.mm in Sources */,
-				D0DFCBDB16DE71DF005D1171 /* zones.cpp in Sources */,
 				0BF4F2FB16DF079F002B7127 /* visualPlayer.cpp in Sources */,
 				0BA2D2C516E00E34005ECDE2 /* centerVisual.cpp in Sources */,
 				D082C9A316E166560033312E /* text.cpp in Sources */,

@@ -23,6 +23,7 @@ void Text::setup(){
     
     tweetString = "Integer ultrices ipsum vitae sapien auctor ut tempus erat imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis metus.";
     userString = "No User Yet.";
+    timer=ofGetElapsedTimeMillis();
     
     
 }
@@ -73,8 +74,11 @@ void Text::draw(){
     //font.drawString(userText, 100, 400);
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2+ ofGetWidth()/12, ofGetHeight()/2);
-    ofRotateZ(90);
+    ofRotateZ(90);    
     userText.drawCenter(0, 155);
+    if(ofGetElapsedTimeMillis()-timer>375){
+        
+    }
     tweetText.drawCenter(0, 100);
     ofPopMatrix();
     
