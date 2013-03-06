@@ -84,15 +84,16 @@ void centerVisual::update(){
         myParticles[i]->addAttractionForce(center.x,center.y, 400, 0.01);
         myParticles[i]->addAttractionForce(center.x,center.y, 500, 0.001);
         
+        ///react to the beat
         if (bHaveBeat) {
-            myParticles[i]->addRepulsionForce(center.x,center.y, 80, 0.1);
+            myParticles[i]->addRepulsionForce(center.x,center.y, 80, 0.05);
             myParticles[i]->addRepulsionForce(center.x,center.y, 1000, 0.005);
 
         }else{
             myParticles[i]->addAttractionForce(center.x,center.y, 1000, 0.01);
-
         }
         
+        ///react to the player's positions
         for (int j=0; j<repulsionPoints.size(); j++) {
             myParticles[i]->addRepulsionForce(repulsionPoints[j].x,repulsionPoints[j].y, 50, 0.5);
             myParticles[i]->addAttractionForce(repulsionPoints[j].x,repulsionPoints[j].y, 20, 0.7);
@@ -122,13 +123,13 @@ void centerVisual::draw(){
     for(int i=0; i<40;i++){
         
         if (!bHaveBeat) {
-            ofSetColor(150,255,230, 6);
+            ofSetColor(150,255,230, 8);
+            ofCircle(center, 5*i);
         }else{
             ofSetColor(150,255,230, 5);
-
+            ofCircle(center, 5.3*i);
         }
-        ofSetCircleResolution(60);
-        ofCircle(center, 5*i);
+
     }
     
     //DRAW PARTICLES

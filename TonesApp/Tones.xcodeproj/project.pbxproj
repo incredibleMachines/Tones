@@ -1367,6 +1367,8 @@
 				D31F963616C9AA3200A1BDEE /* oscPlayer.h */,
 				0BF4F2FA16DF079F002B7127 /* visualPlayer.h */,
 				0BF4F2F916DF079E002B7127 /* visualPlayer.cpp */,
+				0BC2D61D16E2931B00E7D9A4 /* noteZone.h */,
+				0BC2D61C16E2931A00E7D9A4 /* noteZone.cpp */,
 				0B8236ED16E1882B00A0ED6C /* RingParticle.h */,
 				0B8236EC16E1882B00A0ED6C /* RingParticle.cpp */,
 				D082C9A216E166560033312E /* text.h */,
@@ -1375,8 +1377,6 @@
 				0BA2D2C316E00E34005ECDE2 /* centerVisual.cpp */,
 				0B40BED116E38F3E008921D7 /* particleRing.h */,
 				0B40BED016E38F3E008921D7 /* particleRing.cpp */,
-				0BC2D61D16E2931B00E7D9A4 /* noteZone.h */,
-				0BC2D61C16E2931A00E7D9A4 /* noteZone.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;

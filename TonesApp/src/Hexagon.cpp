@@ -203,6 +203,7 @@ void Hexagon::draw(){
     }
     
     ///TEXT VISUALIZER
+    
     newTweets.draw();
     
     ///SYPHON

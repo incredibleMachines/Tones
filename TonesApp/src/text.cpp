@@ -13,9 +13,9 @@ void Text::setup(){
     
     incomingText.setup(PORTTEXT);
         
-    tweetText.init("Coquette_Regular.ttf", 9);
+    tweetText.init("Coquette_Regular.ttf", 12);
     userText.init("Coquette_Regular.ttf", 30);
-    tweetText.wrapTextX(240);
+    tweetText.wrapTextX(500);
     userText.wrapTextX(200);
     
     tweetText.setColor(20, 40, 80, 255);
@@ -53,8 +53,7 @@ void Text::update(){
     //        tweetText.words[i].color.b=ofRandom(255);
     //    }
     
-    
-    tweetText.wrapTextX(260);
+    tweetText.wrapTextX(400);
     
     ofPushStyle();
     tweetText.setColor(255,255,255,255);
@@ -73,8 +72,8 @@ void Text::draw(){
     //font.drawString(tweetText, 100, 100);
     //font.drawString(userText, 100, 400);
     ofPushMatrix();
-    ofTranslate(ofGetWidth()/2+ ofGetWidth()/12, ofGetHeight()/2);
-    ofRotateZ(90);    
+    ofTranslate(ofGetWidth()/2 , 100);
+    ofRotateZ(0);
     userText.drawCenter(0, 155);
     if(ofGetElapsedTimeMillis()-timer>375){
         

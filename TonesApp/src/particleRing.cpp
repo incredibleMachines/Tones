@@ -202,9 +202,6 @@ void particle::update(){
 
 //------------------------------------------------------------
 void particle::draw(){
-  
-    
-
     
    	if (vel.x + vel.y >1){
    		ofSetColor(80- 30 *(vel.x*vel.y), 200 - 30 *(vel.x*vel.y), 255 - 10 * (vel.x*vel.y) );
@@ -217,10 +214,7 @@ void particle::draw(){
    		ofCircle(pos, 1 + vel.x*vel.x*0.5);
         
 //        ofCircle(innerPos , 1+vel.x*vel.y*0.5);
-
    	}
-
-    
 }
 
 

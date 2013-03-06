@@ -7,6 +7,7 @@ void Tones::setup(){
     ofSetVerticalSync(true);
     ofBackground(0);
     ofEnableAlphaBlending();
+    ofSetCircleResolution(60);
     hex.setup();
     
     //TURN ON TEST MODE

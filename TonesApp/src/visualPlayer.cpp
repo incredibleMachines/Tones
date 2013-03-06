@@ -96,22 +96,19 @@ void visualPlayer::draw(){
     ofPushStyle();
     ofFill();
     ofSetColor(255);
-    ofCircle(origin, 3); //circle at origin
-    ofCircle(handle, 3);
+//    ofCircle(origin, 3); //circle at origin
+//    ofCircle(handle, 3); //circle at player position
     ofPopStyle();
     
 //    ofLine(origin, origin+baseLine); //line between
-
     
     ofVec2f moveToOrigin = playerPos - origin;
 
     ofSetColor(50, 50, 50);
     ofLine(origin, origin-baseLine*0.5); //line beyond origin
-    
-    
-    ///rotate over the main angle
-    ofPushMatrix();
-    ofTranslate(origin);
+        
+    ofPushMatrix(); /// push
+    ofTranslate(origin); ///rotate over the main angle
     ofRotateZ(angleDeg);
     
     ///DRAW HERE
@@ -126,24 +123,16 @@ void visualPlayer::draw(){
 
     ofRect(-baseLength*1.25, -viewerWidth/2, viewerBaseline.length()*1.5, viewerWidth);
 
-
     //note area
     ofFill();
     zone.draw();
 
+    ofPopMatrix(); ///pop
     
-//    //draw spotlight
-//    ofRect(-baseLine.length()+viewerBaseline.length(), -viewerWidth/2, -viewerBaseline.length(), viewerWidth);
-
-    ofPopMatrix();
-    ///pop
-    
-
-    
-    ///Draw circle for playerPos 
-    ofPushStyle();
-    ofSetColor(0,255,255,100);
-    ofCircle(playerPos,10);
-    ofPopStyle();
+//    ///Draw circle for playerPos 
+//    ofPushStyle();
+//    ofSetColor(0,255,255,100);
+//    ofCircle(playerPos,10);
+//    ofPopStyle();
     
 }

@@ -71,11 +71,7 @@ void noteZone::update(int _note){
             units[i].pos = currentPos;
             units[i].update(false);
             units[i].scale = 0.5;
-
-            
-
         }
-        
     }
 }
 
@@ -146,10 +142,10 @@ void unit::draw(){
 void circle::draw(ofVec2f _pos, float _scale){
     color.setHsb( 200- 10*_scale, 100+3 *_scale, 50 + 10 * _scale);
 //    color.setHsb( 0,10,10);
+    color.setHsb(255, 150, 10);
     ofSetColor(color);
     ofCircle(_pos, _scale);
 }
-
 
 //LINE CLASS
 void line::draw(ofVec2f _pos1, ofVec2f _pos2){
