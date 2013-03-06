@@ -38,7 +38,6 @@ void Text::update(){
             ofDrawBitmapString("GotMessage", 20, 20);
             tweetString= m.getArgAsString(1);
             userString=m.getArgAsString(2);
-            
         }
     }
     
