@@ -31,15 +31,7 @@ void visualPlayer::setup(int _id){
 
 //--------------------------------------------------------------------
 void visualPlayer::update(){
-    if(bActive==true){
-        note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x,viewerOrigin.y))/abs(ofDist(handle.x,handle.y,viewerOrigin.x,viewerOrigin.y)))*numNotes;
-        note=(numNotes-1)-note;
-        bPlaying=true;
-    }
-    else{
-        note=10;
-        playerPos=handle;
-    }
+
     ofVec2f diff = handle - origin;
     float   dist = diff.length();
     angle = atan2(diff.x, diff.y);
@@ -51,10 +43,21 @@ void visualPlayer::update(){
     viewerLine.scale(viewerOffset*baseLine.length());
     viewerOrigin=handle-viewerLine;
     viewerBaseline=viewerLine;
+    ofVec2f viewerEnd=origin-viewerBaseline;
+    
+    if(bActive==true){
+        note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x,viewerOrigin.y))/abs(ofDist(viewerEnd.x,viewerEnd.y, viewerOrigin.x,viewerOrigin.y)))*numNotes;
+        note=(numNotes-1)-note;
+        bPlaying=true;
+    }
+    else{
+        note=10;
+        playerPos=handle;
+    }
     
     //offset for noteZones and repulsion points
     playerPosPct = ofDist(playerPos.x,playerPos.y, viewerOrigin.x, viewerOrigin.y);
-    float offset=ofMap(playerPosPct, 0, ofDist(handle.x,handle.y,viewerOrigin.x,viewerOrigin.y), 1, 0, true);
+    float offset=ofMap(playerPosPct, 0, ofDist(viewerBaseline.x,handle.y,viewerOrigin.x,viewerOrigin.y), 1, 0, true);
     
     if(bActive==false&&bPlaying==true){
         offsetStore=(1-speed)*offsetStore;
@@ -96,11 +99,11 @@ void visualPlayer::draw(){
     ofPushStyle();
     ofFill();
     ofSetColor(255);
-//    ofCircle(origin, 3); //circle at origin
-//    ofCircle(handle, 3); //circle at player position
+    ofCircle(origin, 3); //circle at origin
+    ofCircle(handle, 3); //circle at player position
     ofPopStyle();
     
-//    ofLine(origin, origin+baseLine); //line between
+    ofLine(origin, origin+baseLine); //line between
     
     ofVec2f moveToOrigin = playerPos - origin;
 
@@ -129,10 +132,10 @@ void visualPlayer::draw(){
 
     ofPopMatrix(); ///pop
     
-//    ///Draw circle for playerPos 
-//    ofPushStyle();
-//    ofSetColor(0,255,255,100);
-//    ofCircle(playerPos,10);
-//    ofPopStyle();
+    ///Draw circle for playerPos 
+    ofPushStyle();
+    ofSetColor(0,255,255,100);
+    ofCircle(playerPos,10);
+    ofPopStyle();
     
 }

@@ -23,7 +23,7 @@
 
 ///OSC definitions
 #define HOST "localhost"
-#define PORTHEX 8000
+#define PORTHEX 8500
 
 
 

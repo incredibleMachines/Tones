@@ -166,7 +166,7 @@ void CameraCV::update(bool bAdmin, bool bMouseMode, ofPoint pos1, ofPoint pos2, 
 
             int pixelCount=0;
             vector<ofVec2f> centerPix;
-            for(int k=viewerBaseLine.length();k>0;k--){
+            for(int k=players[i].baseLine.length();k>0;k--){
                 if(pixelCount>pixelSample){
                     break;
                 }

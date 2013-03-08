@@ -292,7 +292,7 @@
         </SCALE>
         <POS>
             <CURRENT>
-                <val_0>570.000000000</val_0>
+                <val_0>740.000000000</val_0>
             </CURRENT>
             <DEFAULT>0</DEFAULT>
         </POS>
@@ -306,26 +306,26 @@
         </SCALE>
         <POS>
             <CURRENT>
-                <val_0>200.000000000</val_0>
+                <val_0>232.000000000</val_0>
             </CURRENT>
             <DEFAULT>0</DEFAULT>
         </POS>
     </Y>
     <ROTATE>
         <CURRENT>
-            <val_0>0.000000000</val_0>
+            <val_0>-90.000000000</val_0>
         </CURRENT>
         <DEFAULT>0</DEFAULT>
     </ROTATE>
     <DRAW>
         <CURRENT>
-            <val_0>0.000000000</val_0>
+            <val_0>1.000000000</val_0>
         </CURRENT>
         <DEFAULT>1</DEFAULT>
     </DRAW>
     <CONTOUR>
         <CURRENT>
-            <val_0>0.000000000</val_0>
+            <val_0>1.000000000</val_0>
         </CURRENT>
         <DEFAULT>1</DEFAULT>
     </CONTOUR>
@@ -376,7 +376,7 @@
         </SCALE>
         <POS>
             <CURRENT>
-                <val_0>-60.000000000</val_0>
+                <val_0>-130.000000000</val_0>
             </CURRENT>
             <DEFAULT>0</DEFAULT>
         </POS>
@@ -390,14 +390,14 @@
         </SCALE>
         <POS>
             <CURRENT>
-                <val_0>232.000000000</val_0>
+                <val_0>224.000000000</val_0>
             </CURRENT>
             <DEFAULT>0</DEFAULT>
         </POS>
     </Y>
     <ROTATE>
         <CURRENT>
-            <val_0>0.000000000</val_0>
+            <val_0>-90.000000000</val_0>
         </CURRENT>
         <DEFAULT>0</DEFAULT>
     </ROTATE>
