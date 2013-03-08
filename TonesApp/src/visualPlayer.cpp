@@ -46,9 +46,17 @@ void visualPlayer::update(){
     ofVec2f viewerEnd=origin-viewerBaseline;
     
     if(bActive==true){
-        note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x,viewerOrigin.y))/abs(ofDist(viewerEnd.x,viewerEnd.y, viewerOrigin.x,viewerOrigin.y)))*numNotes;
-        note=(numNotes-1)-note;
-        bPlaying=true;
+
+        if (visualPlayerId==1 || visualPlayerId==2 || visualPlayerId==4 || visualPlayerId==5) {
+            note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x-baseLine.x*0.5,viewerOrigin.y-baseLine.x*0.5))/abs(ofDist(viewerEnd.x,viewerEnd.y, viewerOrigin.x,viewerOrigin.y+baseLine.y*0.5)))*numNotes;
+            note=(numNotes-1)-note;
+            bPlaying=true;
+
+        }else{
+            note=(abs(ofDist(playerPos.x,playerPos.y,viewerOrigin.x,viewerOrigin.y))/abs(ofDist(viewerEnd.x,viewerEnd.y, viewerOrigin.x,viewerOrigin.y)))*numNotes;
+            note=(numNotes-1)-note;
+            bPlaying=true;
+        }
     }
     else{
         note=10;

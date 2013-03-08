@@ -12,7 +12,7 @@ void Tones::setup(){
     
     //TURN ON TEST MODE
     bTestMode=false;
-    bMouseMode=false;
+    bMouseMode=true;
     
     if(bTestMode){
         timer=ofGetElapsedTimeMillis();
@@ -30,7 +30,7 @@ void Tones::update(){
 void Tones::draw(){
     ofSetLineWidth(2);
 //    ofCircle(ofGetWidth()/2, ofGetHeight()/2, 5);
-    ofDrawBitmapString(ofToString(ofGetFrameRate()),ofGetWidth()/4,ofGetHeight()/4);
+//    ofDrawBitmapString(ofToString(ofGetFrameRate()),ofGetWidth()/4,ofGetHeight()/4); ///Draw framerate
     hex.draw();
 
 }

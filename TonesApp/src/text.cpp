@@ -13,13 +13,13 @@ void Text::setup(){
     
     incomingText.setup(PORTTEXT);
         
-    tweetText.init("Coquette_Regular.ttf", 12);
-    userText.init("Coquette_Regular.ttf", 30);
+    tweetText.init("Arial_Rounded_Bold.ttf", 11);
+    userText.init("Arial_Rounded_Bold.ttf", 50);
     tweetText.wrapTextX(500);
     userText.wrapTextX(200);
     
     tweetText.setColor(20, 40, 80, 255);
-    userText.setColor(20, 40, 80, 255);
+    userText.setColor(240, 80, 80, 255);
     
     tweetString = "Integer ultrices ipsum vitae sapien auctor ut tempus erat imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis metus.";
     userString = "No User Yet.";
@@ -56,8 +56,8 @@ void Text::update(){
     tweetText.wrapTextX(400);
     
     ofPushStyle();
-    tweetText.setColor(255,255,255,255);
-    userText.setColor(20, 40, 80, 255);
+    tweetText.setColor(240,235,200,255);
+    userText.setColor(200, 80, 80, 255);
     //userText.setColor(255, 0, 0, 255);
     userText.forceScale(0.3f);
     //userText.wrapTextArea(400, 400;);
@@ -74,7 +74,7 @@ void Text::draw(){
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2 , 100);
     ofRotateZ(0);
-    userText.drawCenter(0, 155);
+    userText.drawCenter(0, 180);
     if(ofGetElapsedTimeMillis()-timer>375){
         
     }
