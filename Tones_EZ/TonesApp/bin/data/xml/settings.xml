@@ -1,0 +1,26 @@
+<CAM1>
+    <CONTOUR>
+        <val_0>1.000000000</val_0>
+    </CONTOUR>
+    <GAIN>
+        <val_0>0.500000000</val_0>
+    </GAIN>
+    <SHUTTER>
+        <val_0>0.500000000</val_0>
+    </SHUTTER>
+    <GAMMA>
+        <val_0>0.172222227</val_0>
+    </GAMMA>
+    <BRIGHTNESS>
+        <val_0>0.383333325</val_0>
+    </BRIGHTNESS>
+    <CONTRAST>
+        <val_0>1.000000000</val_0>
+    </CONTRAST>
+    <HUE>
+        <val_0>1.000000000</val_0>
+    </HUE>
+    <THRESH>
+        <val_0>43.333332062</val_0>
+    </THRESH>
+</CAM1>
